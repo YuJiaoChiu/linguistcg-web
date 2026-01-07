@@ -191,9 +191,9 @@ export function FileUploader({ onFilesUploaded }: FileUploaderProps) {
         type="file"
         accept=".srt"
         multiple
-        webkitdirectory=""
         onChange={handleFileChange}
         className="hidden"
+        {...{ webkitdirectory: "" } as React.InputHTMLAttributes<HTMLInputElement>}
       />
     </div>
   )
