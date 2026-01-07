@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-black;
+  }
+
+  body {
+    @apply bg-neo-cream text-black font-bold antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black tracking-tight uppercase;
+  }
+
+  p {
+    @apply font-bold;
+  }
+}
+
+/* Neo-Brutalist Component Styles */
+@layer components {
+  /* Button Styles */
+  .btn-brutal-primary {
+    @apply px-6 py-3 bg-neo-accent border-4 border-black text-black font-bold uppercase tracking-wide
+           shadow-brutal hover:shadow-brutal-md active:translate-x-[2px] active:translate-y-[2px] active:shadow-none
+           transition-all duration-100;
+  }
+
+  .btn-brutal-secondary {
+    @apply px-6 py-3 bg-neo-secondary border-4 border-black text-black font-bold uppercase tracking-wide
+           shadow-brutal hover:shadow-brutal-md active:translate-x-[2px] active:translate-y-[2px] active:shadow-none
+           transition-all duration-100;
+  }
+
+  .btn-brutal-outline {
+    @apply px-6 py-3 bg-white border-4 border-black text-black font-bold uppercase tracking-wide
+           shadow-brutal hover:bg-neo-secondary active:translate-x-[2px] active:translate-y-[2px] active:shadow-none
+           transition-all duration-100;
+  }
+
+  /* Card Styles */
+  .card-brutal {
+    @apply bg-white border-4 border-black shadow-brutal-md hover:-translate-y-1 hover:shadow-brutal-lg
+           transition-all duration-200;
+  }
+
+  .card-brutal-accent {
+    @apply bg-neo-accent border-4 border-black shadow-brutal-md hover:-translate-y-1 hover:shadow-brutal-lg
+           transition-all duration-200;
+  }
+
+  .card-brutal-secondary {
+    @apply bg-neo-secondary border-4 border-black shadow-brutal-md hover:-translate-y-1 hover:shadow-brutal-lg
+           transition-all duration-200;
+  }
+
+  .card-brutal-muted {
+    @apply bg-neo-muted border-4 border-black shadow-brutal-md hover:-translate-y-1 hover:shadow-brutal-lg
+           transition-all duration-200;
+  }
+
+  /* Input Styles */
+  .input-brutal {
+    @apply bg-white border-4 border-black px-4 py-3 text-lg font-bold placeholder:text-black/40
+           focus:bg-neo-secondary focus:shadow-brutal focus:outline-none focus:ring-0
+           transition-all duration-100;
+  }
+
+  /* Badge Styles */
+  .badge-brutal {
+    @apply inline-flex items-center px-3 py-1 bg-neo-accent border-2 border-black text-black
+           font-black text-xs uppercase tracking-widest shadow-brutal-sm;
+  }
+
+  .badge-brutal-pill {
+    @apply inline-flex items-center px-4 py-2 bg-neo-secondary border-3 border-black text-black
+           font-black text-sm uppercase tracking-widest shadow-brutal rounded-full;
+  }
+
+  /* Scrollbar Styles */
+  .scrollbar-brutal::-webkit-scrollbar {
+    @apply w-3 h-3;
+  }
+
+  .scrollbar-brutal::-webkit-scrollbar-track {
+    @apply bg-neo-cream border-2 border-black;
+  }
+
+  .scrollbar-brutal::-webkit-scrollbar-thumb {
+    @apply bg-black border-2 border-black;
+  }
+
+  .scrollbar-brutal::-webkit-scrollbar-thumb:hover {
+    @apply bg-neo-accent;
+  }
+
+  /* Diff Styles - Neo-brutalist version */
+  .diff-added {
+    @apply bg-neo-secondary text-black font-black px-2 py-1 border-l-4 border-black;
+  }
+
+  .diff-removed {
+    @apply bg-neo-accent text-black line-through px-2 py-1 border-l-4 border-black opacity-70;
+  }
+
+  .diff-unchanged {
+    @apply text-black;
+  }
+
+  /* Sticker Effect */
+  .sticker-rotate-1 {
+    @apply rotate-1;
+  }
+
+  .sticker-rotate-2 {
+    @apply rotate-2;
+  }
+
+  .sticker-rotate-3 {
+    @apply rotate-3;
+  }
+
+  .sticker-rotate-n1 {
+    @apply -rotate-1;
+  }
+
+  .sticker-rotate-n2 {
+    @apply -rotate-2;
+  }
+}
+
+/* Background Patterns */
+@layer utilities {
+  .bg-halftone {
+    background-image: radial-gradient(#000 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+  }
+
+  .bg-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  }
+
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+  }
+
+  /* Text Stroke Effect */
+  .text-stroke {
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+  }
+
+  .text-stroke-white {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+  }
+}
+
+/* Animations */
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s infinite;
+}

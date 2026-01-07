@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "name": "CG 保护词库",
+    "version": "1.0.0",
+    "description": "不应被修正的专有名词和软件名称",
+    "last_updated": "2026-01-06"
+  },
+  "protected_words": [
+    {
+      "word": "Octane",
+      "category": "渲染器",
+      "note": "OTOY 公司的 GPU 渲染器"
+    },
+    {
+      "word": "Houdini",
+      "category": "软件",
+      "note": "SideFX 的程序化建模软件"
+    },
+    {
+      "word": "Redshift",
+      "category": "渲染器",
+      "note": "Maxon 的 GPU 渲染器"
+    },
+    {
+      "word": "Arnold",
+      "category": "渲染器",
+      "note": "Autodesk 的 CPU 渲染器"
+    },
+    {
+      "word": "Maya",
+      "category": "软件",
+      "note": "Autodesk 的 3D 建模软件"
+    },
+    {
+      "word": "Blender",
+      "category": "软件",
+      "note": "开源 3D 创作套件"
+    },
+    {
+      "word": "Cinema 4D",
+      "category": "软件",
+      "note": "Maxon 的 3D 软件"
+    },
+    {
+      "word": "V-Ray",
+      "category": "渲染器",
+      "note": "Chaos Group 的渲染器"
+    },
+    {
+      "word": "Substance",
+      "category": "软件",
+      "note": "Adobe 材质制作工具"
+    },
+    {
+      "word": "ZBrush",
+      "category": "软件",
+      "note": "Pixologic 的数字雕刻软件"
+    },
+    {
+      "word": "Nuke",
+      "category": "软件",
+      "note": "Foundry 的合成软件"
+    },
+    {
+      "word": "After Effects",
+      "category": "软件",
+      "note": "Adobe 的视频合成软件"
+    },
+    {
+      "word": "Unreal Engine",
+      "category": "引擎",
+      "note": "Epic Games 的游戏引擎"
+    },
+    {
+      "word": "Unity",
+      "category": "引擎",
+      "note": "Unity Technologies 的游戏引擎"
+    },
+    {
+      "word": "Marmoset",
+      "category": "软件",
+      "note": "实时渲染工具"
+    }
+  ]
+}

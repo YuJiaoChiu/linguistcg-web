@@ -1,0 +1,39 @@
+1
+00:00:01,000 --> 00:00:03,500
+Welcome to this tutorial about Octane renderer
+
+2
+00:00:04,000 --> 00:00:07,000
+Today we will learn about Keyframe animation
+
+3
+00:00:07,500 --> 00:00:10,000
+First, let's set up the Effective Path
+
+4
+00:00:10,500 --> 00:00:13,000
+Then we'll adjust the F曲线 for smooth motion (音乐)
+
+5
+00:00:13,500 --> 00:00:16,000
+The Render Engine in Maya is very powerful
+
+6
+00:00:16,500 --> 00:00:19,000
+You can also use Houdini for procedural modeling
+
+7
+00:00:19,500 --> 00:00:22,000
+The Viewport shows real-time preview (哼哼)
+
+8
+00:00:22,500 --> 00:00:25,000
+Arnold and Redshift are both great renderers
+
+9
+00:00:25,500 --> 00:00:28,000
+Don't forget to optimize your Mesh topology
+
+10
+00:00:28,500 --> 00:00:31,000
+Use Shader nodes to create realistic materials
