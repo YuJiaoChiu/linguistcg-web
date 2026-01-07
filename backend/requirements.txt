@@ -1,31 +1,21 @@
 # FastAPI 核心框架
-fastapi==0.109.0
-uvicorn[standard]==0.27.0
-pydantic==2.5.3
-pydantic-settings==2.1.0
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.3
+pydantic-settings>=2.1.0
 
 # ASGI 服务器
-python-multipart==0.0.6
+python-multipart>=0.0.6
 
 # CORS 支持
-python-dotenv==1.0.0
+python-dotenv>=1.0.0
 
 # 文本处理
-chardet==5.2.0
-regex==2023.12.25
+chardet>=5.2.0
+regex>=2023.12.25
 
 # 异步支持
-aiofiles==23.2.1
+aiofiles>=23.2.1
 
 # 数据验证
-email-validator==2.1.0
-
-# 测试
-pytest==7.4.3
-pytest-asyncio==0.21.1
-httpx==0.26.0
-
-# 代码质量
-black==24.1.1
-flake8==7.0.0
-mypy==1.8.0
+email-validator>=2.1.0
