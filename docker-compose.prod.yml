@@ -5,28 +5,36 @@ services:
     build: ./backend
     container_name: linguistcg-backend
     restart: unless-stopped
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     volumes:
-      # 字典文件持久化
       - ./dictionaries:/dictionaries
-      # 上传文件持久化（可选）
       - ./data/uploads:/app/uploads
       - ./data/backups:/app/backups
     environment:
       - DEBUG=false
-      - ALLOWED_ORIGINS=http://localhost:3000,http://localhost
+      - ALLOWED_ORIGINS=http://localhost,https://your-domain.com
 
   frontend:
     build:
       context: ./frontend
       args:
-        - NEXT_PUBLIC_API_URL=http://localhost:8000/api
+        - NEXT_PUBLIC_API_URL=/api
     container_name: linguistcg-frontend
     restart: unless-stopped
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
     depends_on:
       - backend
-    environment:
-      - NODE_ENV=production
+
+  nginx:
+    image: nginx:alpine
+    container_name: linguistcg-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - frontend
+      - backend

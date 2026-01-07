@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  output: 'standalone',  // Docker 部署需要
 
   // API 配置
   async rewrites() {
